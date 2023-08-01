@@ -39,3 +39,4 @@ Route::get('/match/accept/{id}',[PasanganController::class,'terima'])->middlewar
 Route::get('/match/reject/{id}',[PasanganController::class,'tolak'])->middleware('auth');
 Route::get('/show/L',[LoginController::class,'ShowGender1']);
 Route::get('/show/P',[LoginController::class,'ShowGender2']);
+Route::put('/user/top-up', [LoginController::class,'topup']);

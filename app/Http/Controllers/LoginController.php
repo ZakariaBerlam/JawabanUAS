@@ -145,4 +145,11 @@ class LoginController extends Controller
         request()->session()->regenerateToken();
         return redirect('/');
     }
+
+    public function topup(Request $request){
+        $user = User::find(auth()->user()->id);
+        $user->wallet = $user->wallet + $request->wallet;
+        $user->update();
+        return redirect('/');
+    }
 }
