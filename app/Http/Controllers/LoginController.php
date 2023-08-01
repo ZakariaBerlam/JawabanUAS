@@ -150,6 +150,6 @@ class LoginController extends Controller
         $user = User::find(auth()->user()->id);
         $user->wallet = $user->wallet + $request->wallet;
         $user->update();
-        return redirect('/');
+        return redirect('/home');
     }
 }

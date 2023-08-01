@@ -40,4 +40,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function Hobby(){
+        return $this->hasMany(Hobby::class);
+    }
+
+    public function Pasangan(){
+        return $this->hasMany(Pasangan::class);
+    }
 }

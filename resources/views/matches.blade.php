@@ -7,7 +7,7 @@
         @php
              $couples = App\Models\Pasangan::where('user1_id',auth()->user()->id)->get()
         @endphp
-        @foreach ($couples as $pasa)
+        @foreach ($couples as $couple)
         @php
             $pasangan = App\Models\User::where('id',$couple->user2_id)->first();
         @endphp
